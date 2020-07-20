@@ -1,2 +1,0 @@
-# jp_mirrai
- WEBSITE QUẢN LÝ HỌC SINH MIRRAI

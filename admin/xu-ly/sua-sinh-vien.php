@@ -4,11 +4,11 @@
 	$idsv = (int)$_POST["idsv"];
 	$mk2 = md5($_POST["mk2"]);
 	$tensv = htmlspecialchars($_POST["tensv"]);
-	echo $nhanxet = htmlspecialchars($_POST["nhanxet"]);
-	echo $Reaction = (int)$_POST["Reaction"];
-	echo $Memori = (int)$_POST["Memori"];
-	echo $Pragmatic = (int)$_POST["Pragmatic"];
-	echo $Communication = (int)$_POST["Communication"];
+	$nhanxet = htmlspecialchars($_POST["nhanxet"]);
+	$Reaction = (int)$_POST["Reaction"];
+	$Memori = (int)$_POST["Memori"];
+	$Pragmatic = (int)$_POST["Pragmatic"];
+	$Communication = (int)$_POST["Communication"];
 	$Concentration = (int)$_POST["Concentration"];
 	$Attitude = (int)$_POST["Attitude"];
 	$Planability = (int)$_POST["Planability"];
@@ -39,7 +39,7 @@
 	<?php
 			
 		}else {
-		echo $suasv = "UPDATE `jp_students` SET `fullName` = '$tensv', `cmt_1` = '$nhanxet',`point_Reaction` = '$Reaction',`point_Memorization` = '$Memori',`point_Pragmatic` = '$Pragmatic',`point_communication` = '$Communication',`point_Concentration` = '$Concentration',`point_Attitude` = '$Attitude',`point_Planability` = '$Planability',`point_Health` = '$Health' WHERE `id` = $idsv";
+		 $suasv = "UPDATE `jp_students` SET `fullName` = '$tensv', `cmt_1` = '$nhanxet',`point_Reaction` = '$Reaction',`point_Memorization` = '$Memori',`point_Pragmatic` = '$Pragmatic',`point_communication` = '$Communication',`point_Concentration` = '$Concentration',`point_Attitude` = '$Attitude',`point_Planability` = '$Planability',`point_Health` = '$Health' WHERE `id` = $idsv";
 		mysqli_query($conn, $suasv); ?>
 
 			<div class="alert alert-success fade in" role="alert">
