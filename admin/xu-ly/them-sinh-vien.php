@@ -45,7 +45,16 @@
 			//tiến hành upload
 			if(move_uploaded_file($_FILES['file']['tmp_name'], '../../jp_imgs_students/1/' . $masv.'.png')){
 				//Nếu thành công
-				die('Upload thành công file: '. $_FILES['file']['tmp_name']); //in ra thông báo + tên file
+				?>
+				<div class="alert alert-success fade in" role="alert">
+	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	      	<strong>GOOD!</strong> Thêm thành công, Bạn có muốn thêm điểm ngay cho Sinh viên <strong><?php echo $tensv;?></strong> ? <br> <br>
+	      	<center>
+	      	<button type="button" class="btn btn-success" data-toggle="modal"><a href="<?=$url?>admin/?menu=quanlysv">Thêm điểm SV</a></button>
+	      	<button type="button" id="themmoisv" class="btn btn-success">THÊM MỚI SV</button>
+	      	</center>
+			</div>
+			<?php
 			} else{ //nếu k thành công
 				die('Có lỗi!'); //in ra thông báo
 			}
@@ -55,14 +64,7 @@
 		
 		
 		?>
-			<div class="alert alert-success fade in" role="alert">
-	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-	      	<strong>GOOD!</strong> Thêm thành công, Bạn có muốn thêm điểm ngay cho Sinh viên <strong><?php echo $tensv;?></strong> ? <br> <br>
-	      	<center>
-	      	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#themdiem">THÊM ĐIỂM SV</button>
-	      	<button type="button" id="themmoisv" class="btn btn-success">THÊM MỚI SV</button>
-	      	</center>
-	    	</div>
+			
 
 	    	<!-- Modal -->
 				<div class="modal fade" id="themdiem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

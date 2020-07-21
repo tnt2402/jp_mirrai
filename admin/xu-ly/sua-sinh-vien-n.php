@@ -34,7 +34,7 @@
 	<?php
 			
 		}else {
-		echo $suasv = "UPDATE `jp_score` SET  `hinhthuc` = '$type', `score` = '$score' ,`pass` = '$status',`level` = '$level' WHERE `ma_sinhvien` = $idsv AND `kithi` = '$kithi'";
+	    $suasv = "UPDATE `jp_score` SET  `hinhthuc` = '$type', `score` = '$score' ,`pass` = '$status',`level` = '$level' WHERE `ma_sinhvien` = $idsv AND `kithi` = '$kithi'";
 		mysqli_query($conn, $suasv); ?>
 
 			<div class="alert alert-success fade in" role="alert">

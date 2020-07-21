@@ -86,7 +86,7 @@ if($_SESSION["nhomtk"] <2){ ?>
 			//lấy ra kiểu file
 			var type = file_data.type;
 			//Xét kiểu file được upload
-			var match= ["image/gif","image/png","image/jpg",];
+			var match= ["image/jpg","image/png","image/jpeg"];
 			//kiểm tra kiểu file
 			if(type == match[0] || type == match[1] || type == match[2])
 			{
@@ -106,6 +106,7 @@ if($_SESSION["nhomtk"] <2){ ?>
                 data: form_data,                       
                 type: 'post',
                 success: function(res){
+					$('#thongbaothem').html(res);
                 }
             });
 			} else{

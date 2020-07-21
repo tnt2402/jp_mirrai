@@ -14,7 +14,7 @@
                     $a = $a.',[';
                 }
             }   
-            echo $a = '['.$a.']';
+           $a = '['.$a.']';
             
             //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		if($_SESSION["taikhoan"] == NULL){ ?>
