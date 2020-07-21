@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 21, 2020 lúc 04:55 PM
+-- Thời gian đã tạo: Th7 21, 2020 lúc 06:43 PM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.3.6
 
@@ -34,7 +34,7 @@ CREATE TABLE `jp_score` (
   `ngaythi` varchar(100) NOT NULL,
   `hinhthuc` varchar(20) NOT NULL,
   `level` varchar(20) NOT NULL,
-  `score` int(3) NOT NULL,
+  `score` varchar(3) NOT NULL,
   `pass` int(2) NOT NULL,
   `kithi` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -44,12 +44,16 @@ CREATE TABLE `jp_score` (
 --
 
 INSERT INTO `jp_score` (`id`, `ma_sinhvien`, `ngaythi`, `hinhthuc`, `level`, `score`, `pass`, `kithi`) VALUES
-(1, '5', '1595337020', 'thuc hanh', 'N5', 99, 1, 'I'),
-(2, '15', '1595336868', 'thuc hanh', 'N5', 124, 1, 'I'),
-(3, '17', '1595336970', 'thuc hanh', 'N5', 159, 1, 'I'),
-(4, '5', '1595337087', 'thuc hanh', 'N5', 118, 1, 'II'),
-(5, '15', '1595337107', 'thuc hanh', 'N5', 142, 1, 'II'),
-(6, '17', '1595336970', 'thuc hanh', 'N5', 112, 1, 'II');
+(1, '2313', '1595337020', 't', 'N4', '99', 1, 'I'),
+(2, '15', '1595336868', 'thuc hanh', 'N5', '124', 1, 'I'),
+(3, '17', '1595336970', 'thuc hanh', 'N5', '159', 1, 'I'),
+(4, '5', '1595337087', 'thuc hanh', 'N5', '118', 1, 'II'),
+(5, '15', '1595337107', 'thuc hanh', 'N5', '142', 1, 'II'),
+(6, '17', '1595336970', 'thuc hanh', 'N5', '112', 1, 'II'),
+(17, '323', '1595336868', 't', 'N4', '123', 1, 'III'),
+(18, '2222', '1595336868', '', '', '0', 0, 'I'),
+(19, '2222', '1595336868', '', '', '0', 0, 'II'),
+(20, '2222', '1595336868', '', '', '0', 0, 'III');
 
 -- --------------------------------------------------------
 
@@ -82,9 +86,9 @@ CREATE TABLE `jp_students` (
 --
 
 INSERT INTO `jp_students` (`id`, `fullName`, `photo`, `valuer`, `point_Reaction`, `point_Memorization`, `point_Pragmatic`, `point_communication`, `point_Concentration`, `point_Attitude`, `point_Planability`, `point_Health`, `point_Total`, `cmt_1`, `cmt_2`, `isTeacher`, `dateJoin`) VALUES
-(5, 'ha dz', 'http://localhost:8080/a/jp_imgs_students/1/Untitled.png', 'Evaluation', 6, 4, 3, 4, 4, 5, 3, 5, 17, 'good', '', '', ''),
-(15, 'ha mit', 'http://localhost:8080/a/jp_imgs_students/1/Untitled.png', 'Evaluation', 6, 4, 3, 4, 4, 5, 3, 5, 17, 'good', '', '', ''),
-(17, 'tuan dz', 'http://localhost:8080/a/jp_imgs_students/1/Untitled.png', 'Evaluation', 6, 4, 3, 4, 4, 5, 3, 5, 17, 'good', '', '', '');
+(323, 'Do Thi Phuong Thao', 'jp_imgs_students/1/323.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 83, '', '', '', ''),
+(2222, 'Pham Thi Hang', 'jp_imgs_students/1/2222.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 94, '', '', '', ''),
+(2313, 'Vuong Thi Chien', 'jp_imgs_students/1/2313.png', 'Evaluation', 0, 0, 99, 0, 1, 0, 0, 0, 81, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -145,13 +149,13 @@ ALTER TABLE `tai_khoan`
 -- AUTO_INCREMENT cho bảng `jp_score`
 --
 ALTER TABLE `jp_score`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `jp_students`
 --
 ALTER TABLE `jp_students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1256;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3224;
 
 --
 -- AUTO_INCREMENT cho bảng `tai_khoan`

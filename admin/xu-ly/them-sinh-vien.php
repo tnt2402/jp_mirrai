@@ -3,6 +3,8 @@
 	$masv = htmlspecialchars($_POST["masv"]);
 	$tensv = htmlspecialchars($_POST["tensv"]);
 
+
+	
 	
 
 	$kiemtra = "SELECT `id` FROM `jp_students` WHERE `id` = '$masv'";
@@ -25,8 +27,34 @@
       	</span> Đã tồn tại, Vui lòng vào <a href="<?=$url?>admin?menu=quanlysv" style="color:#FFF"><strong>QUẢN LÝ SINH VIÊN</strong></a> để cập nhật thông tin.
     	</div>
 	<?php } else{
-		$themsv = "INSERT INTO `jp_students` (`id`, `fullName`, `valuer`) VALUES ('$masv', '$tensv','Evaluation')";
-		mysqli_query($conn, $themsv); ?>
+		
+	
+		$themsv = "INSERT INTO `jp_students` (`id`, `fullName`, `valuer`, `photo`) VALUES ('$masv', '$tensv','Evaluation', 'jp_imgs_students/1/$masv.png')";
+		mysqli_query($conn, $themsv);
+		$themsv1 = "INSERT INTO `jp_score` (`ma_sinhvien`, `ngaythi`, `pass`, `kithi`) VALUES ('$masv', '1595336868','0', 'I')";
+		$themsv2 = "INSERT INTO `jp_score` (`ma_sinhvien`, `ngaythi`, `pass`, `kithi`) VALUES ('$masv', '1595336868','0', 'II')";
+		$themsv3 = "INSERT INTO `jp_score` (`ma_sinhvien`, `ngaythi`, `pass`, `kithi`) VALUES ('$masv', '1595336868','0', 'III')";
+		mysqli_query($conn, $themsv1);
+		mysqli_query($conn, $themsv2);
+		mysqli_query($conn, $themsv3);
+		
+		$duoi = explode('.', $_FILES['file']['name']); // tách chuỗi khi gặp dấu .
+		$duoi = $duoi[(count($duoi)-1)];//lấy ra đuôi file
+		//Kiểm tra xem có phải file ảnh không
+		if($duoi === 'jpg' || $duoi === 'png' || $duoi === 'gif'){
+			//tiến hành upload
+			if(move_uploaded_file($_FILES['file']['tmp_name'], '../../jp_imgs_students/1/' . $masv.'.png')){
+				//Nếu thành công
+				die('Upload thành công file: '. $_FILES['file']['tmp_name']); //in ra thông báo + tên file
+			} else{ //nếu k thành công
+				die('Có lỗi!'); //in ra thông báo
+			}
+		} else{ //nếu k phải file ảnh
+			die('Chỉ được upload ảnh'); //in ra thông báo
+		}
+		
+		
+		?>
 			<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 	      	<strong>GOOD!</strong> Thêm thành công, Bạn có muốn thêm điểm ngay cho Sinh viên <strong><?php echo $tensv;?></strong> ? <br> <br>

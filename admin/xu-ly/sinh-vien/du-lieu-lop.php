@@ -21,7 +21,7 @@
 		while($row = mysqli_fetch_assoc($qr)){ ?>
 			<tr>
 				<td><?php echo $row["id"]?></td>
-				<td><img src="<?php echo $row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
+				<td><img src="<?php echo $url.$row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
 				<td><?php echo $row["fullName"]?></td>
 				<td><?php echo $row["valuer"]?></td>
 				<td><?php echo $row["point_Reaction"]?></td>

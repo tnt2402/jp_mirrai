@@ -26,7 +26,6 @@ if($_SESSION["nhomtk"] <2){ ?>
 </div>
 <hr>
 <div class="row">
-<form action="#">
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
 		Mã Sinh Viên:
 		<div class="form-group">
@@ -37,6 +36,12 @@ if($_SESSION["nhomtk"] <2){ ?>
 		    <input class="form-control" id="masv" type="text" placeholder="Mã sinh viên..." autofocus="autofocus">
 		    </div>
 	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+	<div class="form-group">
+						<label for="">Avatar</label>
+						<input id="file" type="file" name="sortpic" required="" />
+					</div>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 		Họ Tên Sinh Viên:
@@ -50,9 +55,8 @@ if($_SESSION["nhomtk"] <2){ ?>
 	    </div>
 	</div>
 	<center>
-	<input type="submit" id="submit" class="btn btn-success" value="THÊM SINH VIÊN"></input>
+	<input type="submit" id="them" class="btn btn-success" value="THÊM SINH VIÊN"></input>
 </center>
-	</form>
 
 	
 	
@@ -67,6 +71,7 @@ if($_SESSION["nhomtk"] <2){ ?>
 
 </div>
 <div id="thongbaothem"></div>	
+<div class="status"></div>
 
 <?php }} ?>
 <script>
@@ -76,5 +81,41 @@ if($_SESSION["nhomtk"] <2){ ?>
 		$('a#quanlysv').removeClass('chon');
 		$('a#quanlykhoa').removeClass('chon');
 	});
+		$('#them').click(function() {
+		var file_data = $('#file').prop('files')[0];
+			//lấy ra kiểu file
+			var type = file_data.type;
+			//Xét kiểu file được upload
+			var match= ["image/gif","image/png","image/jpg",];
+			//kiểm tra kiểu file
+			if(type == match[0] || type == match[1] || type == match[2])
+			{
+				//khởi tạo đối tượng form data
+				var form_data = new FormData();
+				//thêm files vào trong form data
+				form_data.append('file', file_data);
+				form_data.append('masv', $('#masv').val());
+				form_data.append('tensv', $('#tensv').val());
+				//sử dụng ajax post
+				$.ajax({
+                url: 'xu-ly/them-sinh-vien.php', // gửi đến file upload.php 
+                dataType: 'text',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: form_data,                       
+                type: 'post',
+                success: function(res){
+                }
+            });
+			} else{
+				$('.status').text('Chỉ được upload file ảnh');
+                	$('#file').val('');
+			}
+
+
+
+	
+});
 	
 </script>

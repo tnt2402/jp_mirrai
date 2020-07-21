@@ -1,20 +1,20 @@
 <?php include_once('../config/config.php');
  session_start();
-            $sv = "SELECT * FROM `jp_students` LIMIT 4";
+            $sv = "SELECT * FROM `jp_students` LIMIT 0,3";
             $chay = mysqli_query($conn, $sv);
             $d = 0;
             $a = '[';
             while($diem = mysqli_fetch_assoc($chay)){
                 $d++;
-                $diemtb = $diem['point_Total']/8;
+                $diemtb = $diem['point_Total'];
                 $id = $diem['fullName'];
             
                 $a = $a.'\''.$id.'\''.','.$diemtb.']';
-                if($d < 4){
+                if($d < 3){
                     $a = $a.',[';
                 }
             }   
-            $a = '['.$a.']';
+            echo $a = '['.$a.']';
             
             //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		if($_SESSION["taikhoan"] == NULL){ ?>
@@ -140,7 +140,7 @@ var chart1 = Highcharts.chart('diem', {
         }
     },
     series: [{
-        name: 'Tran Minh Tuan',
+        name: 'Do Thi Phuong Thao',
         data: [86, 84, 67, 84, 89, 76, 100, 94, 96, 56, 82, 82, 87, 72]
     }]
 });
@@ -150,52 +150,70 @@ var chart1 = Highcharts.chart('diem', {
 var chart2 =  Highcharts.chart('radar', {
 
 chart: {
-    polar: true
+    polar: true,
+    type: 'line'
+},
+
+accessibility: {
 },
 
 title: {
-    text: 'Highcharts Polar Chart'
-},
-
-subtitle: {
-    text: 'Also known as Radar Chart'
+    text: 'Budget vs spending',
+    x: -80
 },
 
 pane: {
-    startAngle: 0,
-    endAngle: 360
+    size: '80%'
 },
 
 xAxis: {
-    tickInterval: 45,
-    min: 0,
-    max: 360,
-    labels: {
-        format: '{value}°'
-    }
+    categories: ['Ngu phap ', 'tu vung', 'nghe hieu', 'dam thoai',
+        'doc hieu', 'kanji'],
+    tickmarkPlacement: 'on',
+    lineWidth: 0
 },
 
 yAxis: {
+    gridLineInterpolation: 'polygon',
+    lineWidth: 0,
     min: 0
 },
 
-plotOptions: {
-    series: {
-        pointStart: 0,
-        pointInterval: 45
-    },
-    column: {
-        pointPadding: 0,
-        groupPadding: 0
-    }
+tooltip: {
+    shared: true,
+    pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+},
+
+legend: {
+    align: 'right',
+    verticalAlign: 'middle',
+    layout: 'vertical'
 },
 
 series: [{
-    type: 'column',
-    name: 'Column',
-    data: [8, 7, 6, 5, 4, 3, 2, 1],
-    pointPlacement: 'between'
-}]
+    name: 'Do Thi Phuong Thao',
+    data: [87, 83, 73, 81, 89, 90],
+    pointPlacement: 'on'
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                align: 'center',
+                verticalAlign: 'bottom',
+                layout: 'horizontal'
+            },
+            pane: {
+                size: '70%'
+            }
+        }
+    }]
+}
+
 });
 </script>
 <script>

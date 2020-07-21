@@ -53,6 +53,7 @@
 						<th>Level</th>
 						<th>Điểm</th>
 						<th>Trạng thái</th>
+						<th>Act</th>
 					</tr>
 					<tbody id="hienthidulieulop">
 					</tbody>

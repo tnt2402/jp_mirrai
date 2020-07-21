@@ -35,7 +35,7 @@
 			?>
 			<tr>
 				<td><?php echo $row["id"]?></td>
-				<td><img src="<?php echo $row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
+				<td><img src="<?php echo $url.$row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
 				<td><?php echo $row["fullName"]?></td>
 				<td><?php echo date('m/d/Y', $score['ngaythi']);?></td>
 				<td><?php echo $score["hinhthuc"]?></td>
@@ -44,15 +44,15 @@
 				<td><?php echo $score["level"]?></td>
 				<td><?php echo $score["score"]?></td>
 				<td><?php echo $stt?></td>
-				<!--<td align="center">
-					<button sua="<?php echo $row["id"]?>" class="btn btn-warning btn-xs" id="sua" title="Sửa"><span class="glyphicon glyphicon-edit"></span>
+				<td align="center">
+					<button sua="<?php echo $row["id"]?>" kithi="<?php echo $hocki?>" class="btn btn-warning btn-xs" id="sua" title="Sửa"><span class="glyphicon glyphicon-edit"></span>
 					</button>
 						<button xoa="<?php echo $row["id"]?>" class="btn btn-danger btn-xs" id="xoa" title="Xóa"><span class="glyphicon glyphicon-trash"></span>
 						</button>
-				</td>-->
 			</tr>
 		<?php }} ?>
 		<script>
+			
 	$('button#xoa').click(function(event) {
  			var id = $(this).attr('xoa');
  			var xoa = confirm("Bạn có thực sự muốn xóa sinh viên có MSV: "+id+" ?");
@@ -71,12 +71,12 @@
  		$('button#sua').click(function() {
  			$('#ModalEdit').modal();
  			var id = $(this).attr('sua');
-
+			 var kithi = $(this).attr('kithi');
  			$.ajax({
- 				url: 'xu-ly/sinh-vien/du-lieu-sua.php',
+ 				url: 'xu-ly/sinh-vien/du-lieu-sua-n.php',
  				type: 'POST',
  				dataType: 'HTML',
- 				data: {id: id},
+ 				data: {id: id, kithi: kithi},
  				success: function(data){
  					$('#noidungsua').html(data);
  				}
