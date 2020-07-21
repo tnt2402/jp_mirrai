@@ -26,6 +26,7 @@ if($_SESSION["nhomtk"] <2){ ?>
 </div>
 <hr>
 <div class="row">
+<form action="#">
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
 		Mã Sinh Viên:
 		<div class="form-group">
@@ -48,6 +49,10 @@ if($_SESSION["nhomtk"] <2){ ?>
 		    </div>
 	    </div>
 	</div>
+	<center>
+	<input type="submit" id="submit" class="btn btn-success" value="THÊM SINH VIÊN"></input>
+</center>
+	</form>
 
 	
 	
@@ -62,9 +67,7 @@ if($_SESSION["nhomtk"] <2){ ?>
 
 </div>
 <div id="thongbaothem"></div>	
-<center>
-	<button type="button" id="themsinhvien" class="btn btn-success">THÊM SINH VIÊN</button>
-</center>
+
 <?php }} ?>
 <script>
 	$(document).ready(function() {
@@ -73,4 +76,5 @@ if($_SESSION["nhomtk"] <2){ ?>
 		$('a#quanlysv').removeClass('chon');
 		$('a#quanlykhoa').removeClass('chon');
 	});
+	
 </script>

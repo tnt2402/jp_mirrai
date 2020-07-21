@@ -141,13 +141,7 @@ var chart1 = Highcharts.chart('diem', {
     },
     series: [{
         name: 'Tran Minh Tuan',
-        data: [11, 22, 33, 44, 55, 22, 23, 44, 25, 42, 11, 95]
-    }, {
-        name: 'Ha Mit',
-        data: [18, 27, 25, 14, 89, 38, 27, 37, 24, 24, 33, 11]
-    }, {
-        name: 'Hihi',
-        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        data: [86, 84, 67, 84, 89, 76, 100, 94, 96, 56, 82, 82, 87, 72]
     }]
 });
 </script>
@@ -201,14 +195,6 @@ series: [{
     name: 'Column',
     data: [8, 7, 6, 5, 4, 3, 2, 1],
     pointPlacement: 'between'
-}, {
-    type: 'line',
-    name: 'Line',
-    data: [1, 2, 3, 4, 5, 6, 7, 8]
-}, {
-    type: 'area',
-    name: 'Area',
-    data: [1, 8, 2, 7, 3, 6, 4, 5]
 }]
 });
 </script>

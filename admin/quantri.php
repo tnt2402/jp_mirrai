@@ -90,7 +90,7 @@ include_once('../header.php');
     		<div class="list-group">
 			  <a href="?menu=bangdk" id="bangdk" class="list-group-item" style="text-align:center">
 			  <span style="font-size:50px;" class="glyphicon glyphicon-dashboard"></span> <br>
-			  Bảng Điều Khiển
+			  Điểm thi
 			  </a>
 			  <a href="?menu=them" id="themsv" class="list-group-item" style="text-align:center">
 			  <span style="font-size:50px;" class="glyphicon glyphicon-plus"></span> <br>
