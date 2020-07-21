@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 21, 2020 lúc 06:43 PM
+-- Thời gian đã tạo: Th7 21, 2020 lúc 07:01 PM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.3.6
 
@@ -44,16 +44,15 @@ CREATE TABLE `jp_score` (
 --
 
 INSERT INTO `jp_score` (`id`, `ma_sinhvien`, `ngaythi`, `hinhthuc`, `level`, `score`, `pass`, `kithi`) VALUES
-(1, '2313', '1595337020', 't', 'N4', '99', 1, 'I'),
-(2, '15', '1595336868', 'thuc hanh', 'N5', '124', 1, 'I'),
-(3, '17', '1595336970', 'thuc hanh', 'N5', '159', 1, 'I'),
-(4, '5', '1595337087', 'thuc hanh', 'N5', '118', 1, 'II'),
-(5, '15', '1595337107', 'thuc hanh', 'N5', '142', 1, 'II'),
-(6, '17', '1595336970', 'thuc hanh', 'N5', '112', 1, 'II'),
-(17, '323', '1595336868', 't', 'N4', '123', 1, 'III'),
-(18, '2222', '1595336868', '', '', '0', 0, 'I'),
-(19, '2222', '1595336868', '', '', '0', 0, 'II'),
-(20, '2222', '1595336868', '', '', '0', 0, 'III');
+(21, '1', '1595336868', '', '', '', 0, 'I'),
+(22, '1', '1595336868', '', '', '', 0, 'II'),
+(23, '1', '1595336868', '', '', '', 0, 'III'),
+(24, '2', '1595336868', '', '', '', 0, 'I'),
+(25, '2', '1595336868', '', '', '', 0, 'II'),
+(26, '2', '1595336868', '', '', '', 0, 'III'),
+(27, '3', '1595336868', '', '', '', 0, 'I'),
+(28, '3', '1595336868', '', '', '', 0, 'II'),
+(29, '3', '1595336868', '', '', '', 0, 'III');
 
 -- --------------------------------------------------------
 
@@ -86,9 +85,9 @@ CREATE TABLE `jp_students` (
 --
 
 INSERT INTO `jp_students` (`id`, `fullName`, `photo`, `valuer`, `point_Reaction`, `point_Memorization`, `point_Pragmatic`, `point_communication`, `point_Concentration`, `point_Attitude`, `point_Planability`, `point_Health`, `point_Total`, `cmt_1`, `cmt_2`, `isTeacher`, `dateJoin`) VALUES
-(323, 'Do Thi Phuong Thao', 'jp_imgs_students/1/323.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 83, '', '', '', ''),
-(2222, 'Pham Thi Hang', 'jp_imgs_students/1/2222.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 94, '', '', '', ''),
-(2313, 'Vuong Thi Chien', 'jp_imgs_students/1/2313.png', 'Evaluation', 0, 0, 99, 0, 1, 0, 0, 0, 81, '', '', '', '');
+(1, 'Do Thi Phuong Thao', 'jp_imgs_students/1/1.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 83, '', '', '', ''),
+(2, 'Pham Thi Hang', 'jp_imgs_students/1/2.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 94, '', '', '', ''),
+(3, 'Vuong Thi Chien', 'jp_imgs_students/1/3.png', 'Evaluation', 0, 0, 0, 0, 0, 0, 0, 0, 81, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -149,7 +148,7 @@ ALTER TABLE `tai_khoan`
 -- AUTO_INCREMENT cho bảng `jp_score`
 --
 ALTER TABLE `jp_score`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `jp_students`
