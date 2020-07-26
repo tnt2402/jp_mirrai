@@ -8,6 +8,6 @@ if (mysqli_connect_errno())
 
 // Change character set to utf8
 mysqli_set_charset($conn,"utf8");
-$url = "http://localhost:8080/a/";
+$url = "https://tuan1242.herokuapp.com/";
 error_reporting(0);
 ?>
