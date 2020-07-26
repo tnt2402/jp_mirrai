@@ -2,7 +2,7 @@
 
 	session_start();
 	error_reporting(0);
-  $url = "http://localhost:8080/a/";
+  $url = "https://tuan1242.herokuapp.com/";
  
  ?>
 <!DOCTYPE html>
