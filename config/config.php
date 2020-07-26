@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","test");
+$conn=mysqli_connect("us-cdbr-east-02.cleardb.com","bec32cb383b011","42206257","test");
 // Check connection
 if (mysqli_connect_errno())
   {
