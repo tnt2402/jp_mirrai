@@ -26,10 +26,11 @@
 					<tr class="chimuc">
 						<th>ID</th>
 						<th>Photo</th>
+						<th>ID Student</th>
 						<th>Full name</th>
 						<th>Valuer</th>
 						<th>Reaction</th>
-						<th>Memori..</th>
+						<th>Memory..</th>
 						<th>Pragmatic</th>
 						<th>communication</th>
 						<th>Concentration</th>

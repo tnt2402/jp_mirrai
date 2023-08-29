@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("us-cdbr-east-02.cleardb.com","bec32cb383b011","42206257","test");
+$conn=mysqli_connect("localhost","tnt2402","toor","db_chal");
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -8,6 +8,6 @@ if (mysqli_connect_errno())
 
 // Change character set to utf8
 mysqli_set_charset($conn,"utf8");
-$url = "https://tuan1242.herokuapp.com/";
+$url = "http://localhost/";
 error_reporting(0);
 ?>

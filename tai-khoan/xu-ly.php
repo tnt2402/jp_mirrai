@@ -29,7 +29,7 @@
 	 ?>
 		<div class="alert alert-success fade in" role="alert">
       	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      	<strong>GOOD!</strong> Đăng nhập thành công, trở về trang chủ sau 3s.
+      	<strong>Done!</strong> Đăng nhập thành công, trở về trang chủ sau 3s.
     	</div>
     	<script>
     	window.setTimeout(function(){window.location.href="../index.php";}, 3000);
@@ -56,7 +56,7 @@
 			 ?>
 			<div class="alert alert-success fade in" role="alert">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-			<strong>GOOD!</strong> Cập nhật thành công, về trang chủ sau 3s.
+			Cập nhật thành công, về trang chủ sau 3s.
 			</div>
 			<script>
 			window.setTimeout(function(){window.location.href="../index.php";}, 3000);

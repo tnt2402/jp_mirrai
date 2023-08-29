@@ -3,7 +3,8 @@
 	if($_SESSION["nhomtk"] > 0)
 	{
 
-		$sql = "SELECT * FROM `jp_students` ";
+		// $sql = "SELECT * FROM `jp_students` ";
+		$sql = "SELECT jp_students.*, tai_khoan.* FROM jp_students JOIN tai_khoan ON jp_students.id = tai_khoan.id_tai_khoan";
 		$qr = mysqli_query($conn, $sql);
 
 	 if(mysqli_num_rows($qr) == 0)
@@ -22,6 +23,7 @@
 			<tr>
 				<td><?php echo $row["id"]?></td>
 				<td><img src="<?php echo $url.$row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
+				<td><?php echo $row["id_student"]?></td>
 				<td><?php echo $row["fullName"]?></td>
 				<td><?php echo $row["valuer"]?></td>
 				<td><?php echo $row["point_Reaction"]?></td>
@@ -33,6 +35,13 @@
 				<td><?php echo $row["point_Planability"]?></td>
 				<td><?php echo $row["point_Health"]?></td>
 				<td><?php echo $row["point_Total"]?></td>
+				
+				<!-- <td><?php echo $row["ten_tai_khoan"]?></td>
+				<td><?php echo $row["mat_khau"]?></td>
+				<td><?php echo $row["email"]?></td>
+				<td><?php echo $row["sdt"]?></td>
+				<td><?php echo $row["mk2"]?></td> -->
+
 				<td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_1"]?></textarea></td>
 				<td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_2"]?></textarea></td>
 				<td align="center">

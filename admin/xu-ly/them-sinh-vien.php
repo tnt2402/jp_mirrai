@@ -48,7 +48,7 @@
 				?>
 				<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-	      	<strong>GOOD!</strong> Thêm thành công, Bạn có muốn thêm điểm ngay cho Sinh viên <strong><?php echo $tensv;?></strong> ? <br> <br>
+	      	<strong>Done!</strong> Thêm thành công, Bạn có muốn thêm điểm ngay cho Sinh viên <strong><?php echo $tensv;?></strong> ? <br> <br>
 	      	<center>
 	      	<button type="button" class="btn btn-success" data-toggle="modal"><a href="<?=$url?>admin/?menu=quanlysv">Thêm điểm SV</a></button>
 	      	<button type="button" id="themmoisv" class="btn btn-success">THÊM MỚI SV</button>

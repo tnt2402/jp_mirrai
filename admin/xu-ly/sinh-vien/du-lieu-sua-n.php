@@ -1,7 +1,7 @@
 <?php 
 	include_once('../../../config/config.php');
 
-	$id = $_POST["id"];
+	$id = $_POST["id_student"];
 	$kithi = $_POST["kithi"];
     $sql = "SELECT * FROM `jp_score` WHERE `ma_sinhvien` = $id AND `kithi` = '$kithi'";
 	$qr = mysqli_query($conn, $sql);

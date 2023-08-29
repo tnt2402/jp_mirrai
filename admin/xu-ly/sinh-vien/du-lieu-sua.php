@@ -2,7 +2,9 @@
 	include_once('../../../config/config.php');
 
 	$id = $_POST["id"];
-	$sql = "SELECT * FROM `jp_students` WHERE `id` = $id";
+	// $sql = "SELECT * FROM `jp_students` WHERE `id` = $id";
+	$sql = "SELECT jp_students.*, tai_khoan.* FROM jp_students JOIN tai_khoan ON jp_students.id = tai_khoan.id_tai_khoan";
+
 	$qr = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($qr);
 
@@ -17,7 +19,7 @@
 		    <div class="input-group-addon">
 		    	<span class="glyphicon glyphicon-barcode"></span>
 		    </div>
-		    <input class="form-control" id="masv" type="text" placeholder="Mã sinh viên..." value="<?php echo $row["id"]?>" style="color:#000" disabled>
+		    <input class="form-control" id="masv" type="text" placeholder="Mã sinh viên..." value="<?php echo $row["id_student"]?>" style="color:#000" disabled>
 		    </div>
 	    </div>
 	</div>
@@ -33,7 +35,7 @@
 	    </div>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-	Point Reaction:
+		Point Reaction:
 		<div class="form-group">
 		    <div class="input-group">
 		    <div class="input-group-addon">
@@ -66,7 +68,7 @@
 	    </div>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		point Communication:
+		Point Communication:
 		<div class="form-group">
 		    <div class="input-group">
 		    <div class="input-group-addon">
@@ -120,12 +122,51 @@
 		    </div>
 	    </div>
 	</div>
-	
-
-	
-
-		Giáo Viên Nhận Xét :
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		Username:
 		<div class="form-group">
+		    <div class="input-group">
+		    <div class="input-group-addon">
+		    <span class="glyphicon"></span>
+		    </div>
+		    <input class="form-control" id="Username" type="text" placeholder="Username" value="<?php echo $row["ten_tai_khoan"]?>" autofocus="autofocus" >
+		    </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		Password:
+		<div class="form-group">
+		    <div class="input-group">
+		    <div class="input-group-addon">
+		    <span class="glyphicon"></span>
+		    </div>
+		    <input class="form-control" id="Password" type="password" placeholder=":>" autofocus="autofocus" >
+		    </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		Email:
+		<div class="form-group">
+		    <div class="input-group">
+		    <div class="input-group-addon">
+		    <span class="glyphicon"></span>
+		    </div>
+		    <input class="form-control" id="Email" type="text" placeholder="Email" value="<?php echo $row["email"]?>" autofocus="autofocus" >
+		    </div>
+	    </div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		SDT:
+		<div class="form-group">
+		    <div class="input-group">
+		    <div class="input-group-addon">
+		    <span class="glyphicon"></span>
+		    </div>
+		    <input class="form-control" id="Sdt" type="text" placeholder="sdt" value="<?php echo $row["sdt"]?>" autofocus="autofocus" >
+		    </div>
+	    </div>
+	</div>
+	<div class="form-group">
 		    <div class="input-group">
 		    <div class="input-group-addon">
 		    	<span class="glyphicon glyphicon-comment"></span>

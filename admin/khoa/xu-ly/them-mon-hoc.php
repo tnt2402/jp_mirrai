@@ -23,7 +23,7 @@
 
 		 <div class="alert alert-success fade in" role="alert">
       	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      	<strong>GOOD!</strong> Thêm môn học mới thành công, mời <strong><a id="rfpage" title="Tải lại" style="color: #FFF">TẢI LẠI TRANG</a></strong>.
+      	<strong>Done!</strong> Thêm môn học mới thành công, mời <strong><a id="rfpage" title="Tải lại" style="color: #FFF">TẢI LẠI TRANG</a></strong>.
     	</div>
 
 <script>

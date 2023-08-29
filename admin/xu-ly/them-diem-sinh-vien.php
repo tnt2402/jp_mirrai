@@ -267,7 +267,7 @@
 			mysqli_query($conn, $sql1); ?>
 			<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-	      	<strong>GOOD!</strong> Thêm điểm cho sinh viên <strong><?php echo $tensv;?></strong> thành công.
+	      	<strong>Done!</strong> Thêm điểm cho sinh viên <strong><?php echo $tensv;?></strong> thành công.
 	    	</div>
 	    	<script>
 	    		$('#themdiemsv').hide();

@@ -11,8 +11,8 @@
 			window.location.href="thong-tin.php";
 		</script>
 	<?php }
- ?>
+?>
 
-<?php 
+<?php
 	include_once('footer.php');
 ?>

@@ -44,7 +44,7 @@
 
 			<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-	      	<strong>GOOD!</strong> Sửa thành công cho Sinh viên <strong><?php echo $tensv;?></strong>,<br> <a href="#" id="rfpage" title="Thoát" style="color: #FFF;font-weight: bold;">Đóng.</a>
+	      	<strong>Done!</strong> Sửa thành công cho Sinh viên <strong><?php echo $tensv;?></strong>,<br> <a href="#" id="rfpage" title="Thoát" style="color: #FFF;font-weight: bold;">Đóng.</a>
 	    	</div>
 
 		<?php }} ?>
