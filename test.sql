@@ -119,9 +119,9 @@ INSERT INTO `tai_khoan` (`id_tai_khoan`, `ten_tai_khoan`, `mat_khau`, `email`, `
 -- (113, '21231231323', '9015867f2d6205412a2d8f154bb7ce4e8bfa30e6', '21231231323@example.com', 1, 'meo meo', '43141414', 'avatardf.png', '2016-10-29 23:11:23', ''),
 -- (122, 'meomeo', '03d3d10d04646711a4a31af99ff49ea331975720', 'meomeo@example.com', 1, 'ahihi', '123123', 'avatardf.png', '2016-11-05 00:11:09', ''),
 -- (123, '101', '21232f297a57a5a743894a0e4a801fc3', '101@example.com', 1, 'Trần Tuấn', '0982584480', 'avatardf.png', '2020-07-19 14:48:24', '');
-(1, 'dothiphuongthao', '098f6bcd4621d373cade4e832627b4f6', 'dothiphuongthao@example.com', 1, 'Do Thi Phuong Thao', '0936935346', 'jp_imgs_students/1/1.png', NOW(), ''),
-(2, 'phamthihang', '098f6bcd4621d373cade4e832627b4f6', 'phamthihang@example.com', 1, 'Pham Thi Hang', '0987654321', 'jp_imgs_students/1/2.png', NOW(), ''),
-(3, 'vuongthichien', '098f6bcd4621d373cade4e832627b4f6', 'vuongthichien@example.com', 1, 'Vuong Thi Chien', '0123456789', 'jp_imgs_students/1/3.png', NOW(), '');
+(1, 'dothiphuongthao', '098f6bcd4621d373cade4e832627b4f6', 'dothiphuongthao@example.com', 1, 'Do Thi Phuong Thao', '0936935346', 'jp_imgs_students/1/1.png', NOW(), 'e2fc714c4727ee9395f324cd2e7f331f'),
+(2, 'phamthihang', '098f6bcd4621d373cade4e832627b4f6', 'phamthihang@example.com', 1, 'Pham Thi Hang', '0987654321', 'jp_imgs_students/1/2.png', NOW(), 'e2fc714c4727ee9395f324cd2e7f331f'),
+(3, 'vuongthichien', '098f6bcd4621d373cade4e832627b4f6', 'vuongthichien@example.com', 1, 'Vuong Thi Chien', '0123456789', 'jp_imgs_students/1/3.png', NOW(), 'e2fc714c4727ee9395f324cd2e7f331f');
 
 --
 -- Chỉ mục cho các bảng đã đổ

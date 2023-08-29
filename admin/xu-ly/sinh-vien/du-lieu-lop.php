@@ -25,7 +25,7 @@
 				<td><img src="<?php echo $url.$row["photo"]?>" alt="Girl in a jacket" width="24" height="24"></td>
 				<td><?php echo $row["id_student"]?></td>
 				<td><?php echo $row["fullName"]?></td>
-				<td><?php echo $row["valuer"]?></td>
+				<!-- <td><?php echo $row["valuer"]?></td>
 				<td><?php echo $row["point_Reaction"]?></td>
 				<td><?php echo $row["point_Memorization"]?></td>
 				<td><?php echo $row["point_Pragmatic"]?></td>
@@ -34,16 +34,16 @@
 				<td><?php echo $row["point_Attitude"]?></td>
 				<td><?php echo $row["point_Planability"]?></td>
 				<td><?php echo $row["point_Health"]?></td>
-				<td><?php echo $row["point_Total"]?></td>
+				<td><?php echo $row["point_Total"]?></td> -->
 				
-				<!-- <td><?php echo $row["ten_tai_khoan"]?></td>
-				<td><?php echo $row["mat_khau"]?></td>
+				<td><?php echo $row["ten_tai_khoan"]?></td>
+				<!-- <td><?php echo $row["mat_khau"]?></td> -->
 				<td><?php echo $row["email"]?></td>
 				<td><?php echo $row["sdt"]?></td>
-				<td><?php echo $row["mk2"]?></td> -->
+				<!-- <td><?php echo $row["mk2"]?></td> -->
 
-				<td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_1"]?></textarea></td>
-				<td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_2"]?></textarea></td>
+				<!-- <td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_1"]?></textarea></td>
+				<td><textarea style="background-color: black;color:#fff;"><?php echo $row["cmt_2"]?></textarea></td> -->
 				<td align="center">
 					<button sua="<?php echo $row["id"]?>" class="btn btn-warning btn-xs" id="sua" title="Sửa"><span class="glyphicon glyphicon-edit"></span>
 					</button>

@@ -28,7 +28,7 @@
 						<th>Photo</th>
 						<th>ID Student</th>
 						<th>Full name</th>
-						<th>Valuer</th>
+						<!-- <th>Valuer</th>
 						<th>Reaction</th>
 						<th>Memory..</th>
 						<th>Pragmatic</th>
@@ -40,7 +40,10 @@
 						<th>Total</th>
 						<th>Conscious attitude</th>
 						<th>Health condition</th>
-						<th>Act</th>
+						<th>Act</th> -->
+						<th>Username</th>
+						<th>Email</th>
+						<th>Phone</th>
 					</tr>
 					<tbody id="hienthidulieulop">
 					</tbody>

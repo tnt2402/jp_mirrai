@@ -220,6 +220,11 @@ $(document).ready(function() {
 				Attitude: $('#Attitude').val(),
 				Planability: $('#Planability').val(),
 				Health: $('#Health').val(),
+				ten_tai_khoan: $('#Username').val(),
+				password: $('#Password').val(),
+				email: $('#Email').eval(),
+				phone: $('#Sdt').eval(),
+				
 			},
 		success: function(data){
 			$('#thongbaothem').html(data);
