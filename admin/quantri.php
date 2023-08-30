@@ -36,6 +36,8 @@ include_once('../header.php');
                 echo "Quản Lý Sinh viên";
               } elseif($_GET["menu"] == "dothi"){
                 echo "Đồ thị điểm";
+              } elseif($_GET["menu"] == "baitap"){
+                echo "Bài tập";
               }else{
                 echo "Bảng Điều Khiển";
               }
@@ -60,6 +62,10 @@ include_once('../header.php');
             <li><a href="?menu=quanlysv" id="quanlysv">
             <span class="glyphicon glyphicon-wrench"></span>
             Quản Lý Sinh viên
+            </a></li>
+            <li><a href="?menu=baitap" id="baitap">
+            <span class="glyphicon glyphicon glyphicon-book"></span>
+            Bài tập
             </a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -103,6 +109,9 @@ include_once('../header.php');
         <a href="?menu=quanlysv" id="quanlysv" class="list-group-item" style="text-align:center">
         <span style="font-size:50px;" class="glyphicon glyphicon-wrench"></span> <br>
         Quản Lý Sinh Viên
+        <a href="?menu=baitap" id="baitap" class="list-group-item" style="text-align:center">
+        <span style="font-size:50px;" class="glyphicon glyphicon glyphicon-book"></span> <br>
+        Bài tập
 			  <a href="../tai-khoan/dang-xuat.php" class="list-group-item" style="text-align:center">
 			  <span style="font-size:50px;" class="glyphicon glyphicon-log-out"></span> <br>
 			  Đăng Xuất
@@ -123,8 +132,10 @@ include_once('../header.php');
 					include_once('quanlysv.php');
         } elseif($_GET["menu"] == "dothi"){
           include_once('dothi.php');
+        } elseif($_GET["menu"] == "baitap"){
+          include_once('baitap.php');
 				}else{
-					include_once('bangdk.php');
+					include_once('quanlysv.php');
 				}
 			 ?> 
 		</div>
