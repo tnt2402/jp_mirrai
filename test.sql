@@ -123,6 +123,25 @@ INSERT INTO `tai_khoan` (`id_tai_khoan`, `ten_tai_khoan`, `mat_khau`, `email`, `
 (2, 'phamthihang', '098f6bcd4621d373cade4e832627b4f6', 'phamthihang@example.com', 1, 'Pham Thi Hang', '0987654321', 'jp_imgs_students/1/2.png', NOW(), 'e2fc714c4727ee9395f324cd2e7f331f'),
 (3, 'vuongthichien', '098f6bcd4621d373cade4e832627b4f6', 'vuongthichien@example.com', 1, 'Vuong Thi Chien', '0123456789', 'jp_imgs_students/1/3.png', NOW(), 'e2fc714c4727ee9395f324cd2e7f331f');
 
+
+CREATE TABLE jp_homeworks (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  start_time DATETIME,
+  end_time DATETIME,
+  teacher VARCHAR(255),
+  status VARCHAR(255),
+  file_path VARCHAR(255),
+  description TEXT,
+  category VARCHAR(255)
+);
+
+INSERT INTO jp_homeworks (name, start_time, end_time, teacher, status, file_path, description, category)
+VALUES
+  ('Homework 1', '2022-01-01 09:00:00', '2022-01-10 18:00:00', 'John Doe', 'Open', './homeworks_vault/hw1.pdf', 'This is the description for Homework 1.', 'Math'),
+  ('Homework 2', '2022-02-01 09:00:00', '2022-02-10 18:00:00', 'Jane Smith', 'Closed', 'www.google.vn', 'This is the description for Homework 2.', 'Science'),
+  ('Homework 3', '2022-03-01 09:00:00', '2022-03-10 18:00:00', 'Bob Johnson', 'Open', './homeworks_vault/hw1.pdf', 'This is the description for Homework 3.', 'History');
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --

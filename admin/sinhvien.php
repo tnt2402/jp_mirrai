@@ -136,7 +136,7 @@
             
             </div>
           </div>
-          <!-- Bảng Điềm -->
+          <!-- Bảng Điểm -->
           <input type="text" id="masv" value="<?php echo $_GET["masv"]?>" style="display: none">
           <input type="text" id="lop" value="<?php echo $_GET["lop"]?>" style="display: none">
           <div class="alert alert-info fade in" role="alert" id="note">

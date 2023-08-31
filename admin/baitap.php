@@ -15,16 +15,19 @@ if ($_SESSION["taikhoan"] == NULL) { ?>
     <div style="padding-top: 55px" class="caption">
         Danh sách bài tập
     </div>
+
+    
     <hr>
     <div class="input-group form-group">
         <input class="form-control" id="myInput" type="text" placeholder="Tìm kiếm bài tập..">
-
+        <button class="btn btn-primary" onclick="addHomework()">Thêm bài tập</button> </div> 
         </span>
     </div>
     <div class="row">
         <table class="table table-bordered table-responsive">
             <tr class="chimuc">
                 <th>ID</th>
+                <th>Subject</th>
                 <th>Name</th>
                 <th>Start Time</th>
                 <th>End Time</th>
